@@ -38,7 +38,7 @@ a {
 #me a:hover {
 	opacity: 1;
 	text-decoration: none;
-	text-shadow: #000 0 0 10px;
+	text-shadow: #666 0 0 10px;
 	-webkit-transform: rotate(5deg);
 	}
 	
@@ -68,7 +68,7 @@ a {
 #linkage li a:hover {
 	opacity: 1;
 	text-decoration: none;
-	text-shadow: #000 0 0 10px;
+	text-shadow: #666 0 0 10px;
 
 
 	}
