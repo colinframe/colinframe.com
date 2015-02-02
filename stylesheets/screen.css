@@ -122,3 +122,16 @@ a {
 .github:hover {
 	color: #4183C4;
 	}
+.strava, 
+.strava:hover {
+	color: #FC4C02;
+	}
+.powerof10, 
+.powerof10:hover {
+	color: #000;
+	}
+.powerof10 span,
+.powerof10:hover span {
+	color: #d61212;
+	}
+}
