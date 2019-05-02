@@ -41,13 +41,13 @@ a {
 	text-shadow: #666 0 0 10px;
 	-webkit-transform: rotate(5deg);
 	}
-	
+
 #linkage {
     list-style-type: none;
     margin: 0 auto 20px auto;
     padding: 0;
     font-size: 8em;
-    font-weight: bold;    
+    font-weight: bold;
     text-transform: lowercase;
 	line-height: 1;
     }
@@ -72,61 +72,46 @@ a {
 
 
 	}
-.flickr, 
+.flickr,
 .flickr:hover {
     color: #0063DC;
     }
 .flickr .end {
     color: #FF0084;
     }
-.delicious {
-	color: #000;
-	}
-.delicious .start, 
-.delicious .start:hover {
-    color: #0000FF;
-    }
-.delicious .mid, 
-.delicious .mid:hover {
-    color: #000;
-    }
-.delicious .end, 
-.delicious .end:hover {
-    color: #DDDDDD;
-    }
-.twitter, 
+.twitter,
 .twitter:hover {
     color: #33CCFF;
     }
-.facebook, 
+.facebook,
 .facebook:hover {
     color: #3B5998;
     }
-.linkedin, 
+.linkedin,
 .linkedin:hover {
     color: #0074A6;
     }
-.vimeo, 
+.vimeo,
 .vimeo:hover {
     color: #3399CC;
     }
-.youtube, 
+.youtube,
 .youtube:hover {
     color: #FF0A0F;
     }
-.tumblr, 
+.tumblr,
 .tumblr:hover {
 	color: #3E5B76;
 	}
-.github, 
+.github,
 .github:hover {
 	color: #4183C4;
 	}
-.strava, 
+.strava,
 .strava:hover {
 	color: #FC4C02;
 	}
-.powerof10, 
+.powerof10,
 .powerof10:hover {
 	color: #000;
 	}
@@ -134,4 +119,8 @@ a {
 .powerof10:hover span {
 	color: #d61212;
 	}
+}
+.rubygems
+.rubygems:hover, {
+  color: #e9573f;
 }
