@@ -87,6 +87,11 @@ def parameterize(string, sep = '-')
 end
 
 def check_destination
+  puts ENV['GIT_NAME']
+  puts ENV['GIT_TOKEN']
+  puts USERNAME
+  puts REPO
+  puts CONFIG["destination"]
   unless Dir.exist? CONFIG["destination"]
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
   end
