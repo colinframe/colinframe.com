@@ -88,7 +88,7 @@ end
 
 def check_destination
   puts ENV['GIT_NAME']
-  puts ENV['GIT_TOKEN']
+  puts ENV['GH_TOKEN']
   puts USERNAME
   puts REPO
   puts CONFIG["destination"]
