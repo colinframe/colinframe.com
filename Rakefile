@@ -93,6 +93,7 @@ def check_destination
   puts REPO
   puts CONFIG["destination"]
   git_line = "git clone https://github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+  git_line = "git clone https://github.com/colinframe/colinframe.github.io.git ../master/"
   puts git_line
   unless Dir.exist? CONFIG["destination"]
     sh git_line
