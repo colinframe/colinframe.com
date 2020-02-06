@@ -94,7 +94,7 @@ def check_destination
   puts CONFIG["destination"]
   puts "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
   unless Dir.exist? CONFIG["destination"]
-    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
+    sh "git clone https://github.com/#{USERNAME}/#{REPO}.git #{CONFIG["destination"]}"
   end
 end
 
