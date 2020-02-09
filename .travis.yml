@@ -1,16 +1,23 @@
 language: ruby
-
+cache: bundler
 install:
-  # Install Jekyll and dependencies
-  - bundle install
+- bundle install
+script:
+- "./build.sh"
 
-script: bundle exec rake site:deploy --trace
-
-env:
-  global:
-    - secure: "zErwnfTfAMotHPF6faeAGYkMy5RYMRqRNbaAdj7FyYTVp3tzSt3ZVGyxXV+e4Afig0bCZVDeo9pJleuTRlAzg7p3cuCkmm7QAO1XUfJNUpaF+K0mnEmHn/JozjLPY6AGuQvxDk9cEuL7OjQ9HKGtfzjjm/doofmu7t3LPFtnDYZqrjfGcSF5gx4daKI8qIOY+FWkCRroASlQ/F1Dc37VTUJiRqecyz0FLKbXdfTOR1Y6DwLVqorjri8ObveeMiEcqYw2CWknFOUGx4hA4Nkv0Ipr1qXYfk4fc03rkvXh8IxEcgWEF+BM5emhLOPBv8Ew22PsnRrvP4w3W1F9mHg+DLRCs1UK1DazcNBYgFbeg6qo2BipKPN53wK0pPHG7/OBDSVz0IwD+OjGS+FRTVMZ9g2mHwb8Iwv2p0HWBout6ZB3KdQ5CFCi8TsIb1Fs5dplPElQpO42UH2ZIYIztUgXWrjivL0Mq+Hv8t+DsfBRSGc2A79lNfJW/2RJgG99gi4BKyBzTEIQizB4259FcCecrZfcQRZ4+9IbmLsKDO6CgVn51i8yCruJHigwnN8vaqMgPJsiCC7HTqgx9MmXi04CJQWkmkaRPgP+GSHqiE2Q1+qvmVew3SnttElGxJ98EXxaz7+0f/iHh5CUtdnZIXeavlgoHipeQKcTGJ2gZsGi6iE="
-
-# Generate your secure token with the travis gem:
-# get Github token from your Travis CI profile page
-# gem install travis
-# travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
+# language: ruby
+#
+# install:
+#   # Install Jekyll and dependencies
+#   - bundle install
+#
+# script: bundle exec rake site:deploy --trace
+#
+# env:
+#   global:
+#     - secure: "zErwnfTfAMotHPF6faeAGYkMy5RYMRqRNbaAdj7FyYTVp3tzSt3ZVGyxXV+e4Afig0bCZVDeo9pJleuTRlAzg7p3cuCkmm7QAO1XUfJNUpaF+K0mnEmHn/JozjLPY6AGuQvxDk9cEuL7OjQ9HKGtfzjjm/doofmu7t3LPFtnDYZqrjfGcSF5gx4daKI8qIOY+FWkCRroASlQ/F1Dc37VTUJiRqecyz0FLKbXdfTOR1Y6DwLVqorjri8ObveeMiEcqYw2CWknFOUGx4hA4Nkv0Ipr1qXYfk4fc03rkvXh8IxEcgWEF+BM5emhLOPBv8Ew22PsnRrvP4w3W1F9mHg+DLRCs1UK1DazcNBYgFbeg6qo2BipKPN53wK0pPHG7/OBDSVz0IwD+OjGS+FRTVMZ9g2mHwb8Iwv2p0HWBout6ZB3KdQ5CFCi8TsIb1Fs5dplPElQpO42UH2ZIYIztUgXWrjivL0Mq+Hv8t+DsfBRSGc2A79lNfJW/2RJgG99gi4BKyBzTEIQizB4259FcCecrZfcQRZ4+9IbmLsKDO6CgVn51i8yCruJHigwnN8vaqMgPJsiCC7HTqgx9MmXi04CJQWkmkaRPgP+GSHqiE2Q1+qvmVew3SnttElGxJ98EXxaz7+0f/iHh5CUtdnZIXeavlgoHipeQKcTGJ2gZsGi6iE="
+#
+# # Generate your secure token with the travis gem:
+# # get Github token from your Travis CI profile page
+# # gem install travis
+# # travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
