@@ -1,91 +1,39 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+---
+layout: default
+current: home
+class: 'home-template'
+navigation: True
+---
 
-	<head>
+<!-- < default -->
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
 
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Language" content="en-gb" />
-		<meta http-equiv="imagetoolbar" content="false" />
-		<meta name="Robots" content="index,follow" />
-		<meta name="MSSmartTagsPreventParsing" content="true" />
-		<meta name="author" content="Colin Frame" />
-		<meta name="description" content="Trust me, it's paradise." />
-		<meta name="keywords" content="colin frame, cframe, web developer, web standards, portfolio, glasgow, random words, blog, tictoc, ruby on rails, jquery, 55degrees" />
+<!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.baseurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+    <div class="inner">
+        <div class="site-header-content">
+            <h1 class="site-title">
+                {% if site.logo %}
+                    <img class="site-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}"/>
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
+            </h1>
+            <h2 class="site-description">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2>
+        </div>
+        {% include site-nav.html %}
+    </div>
+</header>
 
-		<meta name="verify-v1" content="++/JWIFMoDh8oOStMBiha00vMDQIAqvjVY3AsFiMxbk=" />
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
 
-		<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="/stylesheets/typography.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen" />
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            {%  include post-card.html %}
+        </div>
 
-		<!--[if IE 7]>
-		  <link rel="stylesheet" href="/stylesheets/ie7.css" type="text/css" media="screen" />
-  	<![endif]-->
-  	<!--[if lt IE 7]>
-  	  <link rel="stylesheet" href="/stylesheets/ie6.css" type="text/css" media="screen" />
-  	<![endif]-->
-
-		<link rel="icon" href="favicon.ico" type="image/gif" />
-
-		<link rel="openid.server" href="http://www.myopenid.com/server" />
-		<link rel="openid.delegate" href="http://colinframe.myopenid.com/" />
-		<meta http-equiv="X-XRDS-Location" content="http://colinframe.myopenid.com/xrds" />
-
-		<title>My Name is Colin. So what else do you need to know?</title>
-	</head>
-
-	<body id="colinframe-com">
-		<div id="surround">
-			<h1 id="me"><a href="&#109;&#97;&#105;&#108;&#116;&#111;:&#x68;&#x65;&#x6C;&#x6C;&#x6F;&#x40;&#x63;&#x6F;&#x6C;&#x69;&#x6E;&#x66;&#x72;&#x61;&#x6D;&#x65;&#x2E;&#x63;&#x6F;&#x6D;?subject=&#x48;&#x69;&#x20;&#x74;&#x68;&#x65;&#x72;&#x65;&#x21;" title="&#x57;&#x68;&#x79;&#x20;&#x6E;&#x6F;&#x74;&#x20;&#x73;&#x65;&#x6E;&#x64;&#x20;&#x6D;&#x65;&#x20;&#x61;&#x6E;&#x20;&#x65;&#x6D;&#x61;&#x69;&#x6C;&#x3F;">&#x43;&#x6F;&#x6C;&#x69;&#x6E;&#x20;&#x46;&#x72;&#x61;&#x6D;&#x65;</a></h1>
-			<ul id="linkage" class="clearfix">
-			  <li>
-					<a href="http://flickr.com/photos/cframe/" class="flickr">Flick<span class="end">r</span></a>
-				</li>
-			  <li>
-					<a href="http://twitter.com/_colinframe" class="twitter">Twitter</a>
-				</li>
-				<li>
-					<a href="http://www.facebook.com/colinframe" class="facebook">Facebook</a>
-				</li>
-				<li>
-					<a href="http://uk.linkedin.com/in/colinframe" class="linkedin">LinkedIn</a>
-				</li>
-				<li>
-					<a href="http://vimeo.com/colinframe" class="vimeo">Vimeo</a>
-				</li>
-				<li>
-					<a href="http://www.youtube.com/colinframe" class="youtube">YouTube</a>
-				</li>
-				<li>
-					<a href="http://theskyisonfire.com" class="tumblr">tumblr</a>
-				</li>
-				<li>
-					<a href="http://github.com/colinframe" class="github">GitHub</a>
-				</li>
-				<li>
-					<a href="http://www.strava.com/athletes/124271" class="strava">Strava</a>
-				</li>
-				<li>
-					<a href="http://www.thepowerof10.info/athletes/profile.aspx?athleteid=278737" class="powerof10">power <span>of 10</span></a>
-				</li>
-        <li>
-					<a href="https://rubygems.org/profiles/colinframe" class="rubygems">RubyGems</a>
-				</li>
-			</ul>
-		</div>
-
-		<script type="text/javascript">
-			// <![CDATA[
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-65863-1']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
-		  })();
-			// ]]>
-		</script>
-	</body>
-</html>
+    </div>
+</main>
