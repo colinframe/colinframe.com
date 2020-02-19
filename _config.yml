@@ -9,8 +9,8 @@ words_per_minute: 200
 baseurl:  "/"
 
 # Website info
-title: Trust me, it's paradise.
-description: My Name is Colin. So what else do you need to know?
+title: My Name is Colin. So what else do you need to know?
+description: Trust me, it's paradise.
 cover: assets/images/blog-cover.jpg
 logo: assets/images/logo.png
 logo_dark: assets/images/favicon.png
