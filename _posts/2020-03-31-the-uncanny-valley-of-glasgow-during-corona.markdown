@@ -4,7 +4,7 @@ current : post
 cover: images/posts/2020/03/IMG_4573.jpeg
 navigation: True
 title:  "The 'uncanny valley' of Glasgow during Corona"
-date:   2020-02-17 07:10:30 +0000
+date:   2020-31-03 16:10:30 +0000
 tags: update
 class: post-template
 subclass: 'post'
