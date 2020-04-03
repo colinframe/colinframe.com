@@ -33,6 +33,9 @@ disqus_shortname: jekyller # replace with your disqus username
 # Google Analytics
 google_analytics:  # replace with your GA tracking identifier
 
+# Clicky Tracking
+clicky_tracking: 101245395
+
 # Permalinks
 permalink: /:title
 # permalink: /author/:author
