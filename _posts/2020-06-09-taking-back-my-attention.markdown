@@ -4,7 +4,7 @@ current : post
 cover: images/posts/2020/06/freestocks-7Qh1YLFdlqY-unsplash.jpg
 navigation: True
 title:  Taking back my attention
-date:   2020-06-09 22:41:30 +0000
+date:   2020-06-09 21:41:30 +0000
 tags: update
 class: post-template
 subclass: 'post'
