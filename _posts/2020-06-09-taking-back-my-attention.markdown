@@ -11,7 +11,7 @@ subclass: 'post'
 ---
 An experiment in intentionality.
 
-When I last setup my iPhone I deliberately didn’t install the Instagram app. I’d already largely sworn off Twitter and itched Facebook completely after the birth of our first child. Instagram was, and, to a degree, still is a big source of distraction for me. It’s so easy to just hop on and have a quick scroll through.
+When I last setup my iPhone I deliberately didn’t install the Instagram app. I’d already largely sworn off Twitter and ditched using my Facebook account completely after the birth of our first child. My FB account still exists though, more on that in another post. Instagram was, and, to a degree, still is a big source of distraction for me. It’s so easy to just hop on and have a quick scroll through.
 
 Now, what I’m not doing is going on a cold turkey social media detox. I’ve found in recent weeks that Instagram and Twitter can be legitimately useful. A few weeks ago I found a new place to ride out to on the bike that I might not have considered had I not seen someone else’s Instagram post about it. I did, I rode there and it really was a fantastic wee spot less then 10 miles away.
 
