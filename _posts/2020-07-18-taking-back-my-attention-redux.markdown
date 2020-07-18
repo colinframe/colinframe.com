@@ -1,10 +1,10 @@
 ---
 layout: post
 current : post
-cover: images/posts/2020/06/freestocks-7Qh1YLFdlqY-unsplash.jpg
+cover: images/posts/2020/07/romain-vignes-ywqa9IZB-dU-unsplash.jpg
 navigation: True
 title:  Taking back my attention - redux
-date:   2020-06-09 21:02:30 +0000
+date:   2020-07-18 21:02:30 +0000
 tags: update
 class: post-template
 subclass: 'post'
