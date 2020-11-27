@@ -15,8 +15,10 @@ When the first iPhone was released it was pitched as an ‘Internet Communicatio
 
 Fast forward 13 years and the modern mobile phone has become a [slot machine in your pocket](https://medium.com/thrive-global/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3). We pull out our phones and pull or swipe to refresh _just in case_. 
 
-If we didn’t need to look at our devices, would we no longer feel so compelled to check for new notifications? Would we be less ‘worried’ by the red dots of unread notifications in so many of our apps?
+If we didn’t need to look at our devices, would we no longer feel so compelled to check for new notifications? Would we be less ‘worried’ by the red dots of unread notifications in so many of our apps? Is out of sight really out of mind?
 
-Leaning into the Voice UI capabilities of modern smart devices might be a way to start easing ourselves away from the compulsion to check for updates. 
+Leaning into the Voice UI capabilities of modern smart devices might be a way to start easing ourselves away from the compulsion to check for updates.
 
-Apple has Siri, Amazon has Alexa, Samsung has Bixby, Microsoft has Cortana and Google has its assistant. Whilst none of them are perfect they’re all pretty much like science fiction compared to what existed even just a decade ago. 
+Apple has Siri, Amazon has Alexa, Samsung has Bixby, Microsoft has Cortana and Google has its assistant. Whilst none of them are perfect they’re all pretty much like science fiction compared to what existed even just a decade ago.
+
+I've 
