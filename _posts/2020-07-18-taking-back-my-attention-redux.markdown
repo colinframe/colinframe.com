@@ -9,7 +9,7 @@ tags: update
 class: post-template
 subclass: 'post'
 ---
-It feels like I’m starting to ‘win’
+It feels like I’m starting to ‘win’.
 
 About a month ago I decided to try and take back some of my attention from the draw of social media, Instagram and Twitter in particular. 
 
