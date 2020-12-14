@@ -1,11 +1,11 @@
 ---
 layout: post
 current: post
-cover:
+cover: images/posts/2020/12/photo-2.jpeg
 navigation: True
 title: Glasgow lockdown 2.0
 date: 2020-11-27T21:56:11Z
-tags:
+tags: update
 class: post-template
 subclass: 'post'
 ---
