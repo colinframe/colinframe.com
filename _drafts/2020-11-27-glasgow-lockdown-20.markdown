@@ -17,3 +17,4 @@ Once again, I thought I should take a wee wander through town on the bike to see
 
 What I found was a little more life than previous but nothing compared to what you would expect for this time of year. That said, there were still a few glimmers of happiness to be found.
 
+![alt text](/images/posts/2020/12/photo.jpeg)
