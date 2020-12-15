@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: images/posts/2020/12/photo-2.jpeg
+cover: images/posts/2020/11/photo-2.jpeg
 navigation: True
 title: Glasgow lockdown 2.0
 date: 2020-11-27T21:56:11Z
@@ -17,18 +17,18 @@ Once again, I thought I should take a wee wander through town on the bike to see
 
 What I found was a little more life than previous but nothing compared to what you would expect for this time of year. That said, there were still a few glimmers of happiness to be found.
 
-![alt text](/images/posts/2020/12/photo.jpeg)
-![alt text](/images/posts/2020/12/photo-2.jpeg)
-![alt text](/images/posts/2020/12/photo-3.jpeg)
-![alt text](/images/posts/2020/12/photo-4.jpeg)
-![alt text](/images/posts/2020/12/photo-5.jpeg)
-![alt text](/images/posts/2020/12/photo-6.jpeg)
-![alt text](/images/posts/2020/12/photo-7.jpeg)
-![alt text](/images/posts/2020/12/photo-8.jpeg)
-![alt text](/images/posts/2020/12/photo-9.jpeg)
-![alt text](/images/posts/2020/12/photo-10.jpeg)
-![alt text](/images/posts/2020/12/photo-11.jpeg)
-![alt text](/images/posts/2020/12/photo-12.jpeg)
-![alt text](/images/posts/2020/12/photo-13.jpeg)
-![alt text](/images/posts/2020/12/photo-14.jpeg)
-![alt text](/images/posts/2020/12/photo-15.jpeg)
+![alt text](/images/posts/2020/11/photo.jpeg)
+![alt text](/images/posts/2020/11/photo-2.jpeg)
+![alt text](/images/posts/2020/11/photo-3.jpeg)
+![alt text](/images/posts/2020/11/photo-4.jpeg)
+![alt text](/images/posts/2020/11/photo-5.jpeg)
+![alt text](/images/posts/2020/11/photo-6.jpeg)
+![alt text](/images/posts/2020/11/photo-7.jpeg)
+![alt text](/images/posts/2020/11/photo-8.jpeg)
+![alt text](/images/posts/2020/11/photo-9.jpeg)
+![alt text](/images/posts/2020/11/photo-10.jpeg)
+![alt text](/images/posts/2020/11/photo-11.jpeg)
+![alt text](/images/posts/2020/11/photo-12.jpeg)
+![alt text](/images/posts/2020/11/photo-13.jpeg)
+![alt text](/images/posts/2020/11/photo-14.jpeg)
+![alt text](/images/posts/2020/11/photo-15.jpeg)
