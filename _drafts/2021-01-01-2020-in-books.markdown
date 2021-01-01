@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 
+cover: images/posts/2021/01/janko-ferlic-sfL_QOnmy00-unsplash.jpg
 navigation: True
 title: 2020 in books
 date: 2021-01-01T21:40:55Z
@@ -41,3 +41,5 @@ This took me a while to get through partly because a lot of a central tenets I�
 [The Year Without Pants: WordPress.com and the Future of Work](https://www.goodreads.com/book/show/18600085-the-year-without-pants) - Scott Berkun
 
 This was a pretty funny read and whilst it now may be a bit dated (remote work being more commonplace) it was still an interesting look into how a company like WordPress/Automattic is/was run.
+
+<span>Photo by <a href=“https://unsplash.com/@itfeelslikefilm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText”>🇸🇮 Janko Ferlič</a> on <a href=“https://unsplash.com/s/photos/books?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText”>Unsplash</a></span>
