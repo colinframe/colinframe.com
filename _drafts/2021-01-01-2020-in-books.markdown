@@ -1,0 +1,43 @@
+---
+layout: post
+current: post
+cover: 
+navigation: True
+title: 2020 in books
+date: 2021-01-01T21:40:55Z
+tags: 
+class: post-template
+subclass: 'post'
+---
+
+What did I read last year?
+
+For the first time probably since becoming a parent I tried to make time to read a bit more this year. Sure it’s not huge compared to more voracious readers but it’s an improvement!
+
+[Why We Sleep: The New Science of Sleep and Dreams](https://www.goodreads.com/book/show/48592299-why-we-sleep) - Matthew Walker
+
+This was a fascinating and very insightful read. It’s definitely got me thinking more about my sleep and trying to improve my quality of sleep, which has historically not been great.
+	
+[Essentialism: The Disciplined Pursuit of Less](https://www.goodreads.com/book/show/21174350-essentialism) - Greg McKeown
+
+A couple of years ago I read through a lot of minimalism books but I think Essentialism is probably more applicable to the wider public. It’s not about just throwing away all bar X number of possessions but really digging into what’s essential for you in your life, something that I think has been brought to the fore for a lot of people through the COVID-19 pandemic and associated restrictions.
+	
+[The 4-Hour Work Week: Escape the 9-5, Live Anywhere and Join the New Rich](https://www.goodreads.com/book/show/18951183-the-4-hour-work-week) - Tim Ferriss
+
+I can see where Ferris was going with this book, empowering people to break away from the traditional 9-5 and becoming entrepreneurs but the ‘dropship’ idea in particular didn’t really sit well with me. Yes, it’s a means to your lifestyle ends but in the process it could very easily be that you’re not really providing any ‘value’ in the company that you’re building.
+	
+[Company of One: Why Staying Small is the Next Big Thing for Business](https://www.goodreads.com/book/show/41144788-company-of-one) - Paul Jarvis
+
+A lot of the points in this book about staying small and focussing on being better rather than bigger really resonated with me. It for sure ties in with Essentialism and some of the Minimalist related books I’ve read in the past.
+
+[Designing Your Life: Build a Life that Works for You](https://www.goodreads.com/book/show/31634824-designing-your-life) Bill Burnett
+
+I didn’t know anything about ‘design thinking’ before reading this and I’ll be honest, I think I need to go back through it to fully solidify the idea in my mind. I also still need to go back through and go through the worksheets that it came with to help you go through the design process for your own life.
+
+[Atomic Habits: An Easy and Proven Way to Build Good Habits and Break Bad Ones](https://www.goodreads.com/book/show/54615491-atomic-habits) - James Clear
+
+This took me a while to get through partly because a lot of a central tenets I’d read versions of online in summaries of the book or on the authors blog. Still some useful information and tips to be had though.
+
+[The Year Without Pants: WordPress.com and the Future of Work](https://www.goodreads.com/book/show/18600085-the-year-without-pants) - Scott Berkun
+
+This was a pretty funny read and whilst it now may be a bit dated (remote work being more commonplace) it was still an interesting look into how a company like WordPress/Automattic is/was run.
