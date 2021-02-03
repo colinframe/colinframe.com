@@ -20,4 +20,6 @@ For our my wife and I we had to figure out how to juggle work and looking after 
 
 It was in those 2-3 hours that I found most of the goodness in lockdown. My daughters now have such a tight bond, mostly forged through having to spend so much time together over the last year - mercifully, they’re pretty good together! We’d go for picnics in the local nature walk, we rode around all the back lanes here over a few weeks, marking them off on a map as we went. They would build dens using a giant cardboard box in the house, make a cinema screening room out of a pop up tent in the garden - yes, how lucky we were to both have a garden and have weather to use it. 
 
-I also found that having to split my time between them and work made me be more focussed on each ‘mode’ I was in, while I was in it. 
+I also found that having to split my time between them and work made me be more focussed on each ‘mode’ I was in, while I was in it. It took some doing and it’s where a good chunk of my desire to [take back my attention](https://www.colinframe.com/taking-back-my-attention) came from. What I’m trying to do now is to keep my phone out of reach while I’m with the girls so I give them my full attention. 
+
+Having to split my days so much between work and childcare also forces me to try and be more productive when I was in a work block. Simple things like closing my email client most of the time made a big difference. I now schedule time for getting my email handled and it’s working well so far. 
