@@ -4,7 +4,7 @@ current: post
 cover:
 navigation: True
 title: Looking for the good in lockdown
-date: 2021-01-30T22:12:42Z
+date: 2021-02-05T11:38:42Z
 tags:
 class: post-template
 subclass: 'post'
