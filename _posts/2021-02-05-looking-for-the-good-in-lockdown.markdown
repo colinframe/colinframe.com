@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:
+cover: images/posts/2021/02/IMG_4644.jpg
 navigation: True
 title: Looking for the good in lockdown
 date: 2021-02-05T11:38:42Z
@@ -9,7 +9,6 @@ tags:
 class: post-template
 subclass: 'post'
 ---
-
 At times undoubtedly super hard but there were some bright spots.
 
 I’ll preface this by saying that this is my personal perspective on what I experienced through the first lockdown last March. I know that for a lot of people they found it an all together much more challenging time.
