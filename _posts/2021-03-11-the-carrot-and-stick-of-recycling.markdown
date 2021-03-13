@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: /images/posts/2021/03/sigmund-aI4RJ—Mw4I-unsplash.jpg
+cover: images/posts/2021/03/sigmund-aI4RJ—Mw4I-unsplash.jpg
 navigation: True
 title: The carrot and stick of recycling
 date: 2021-03-11T21:54:50Z
