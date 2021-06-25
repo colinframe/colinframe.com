@@ -10,6 +10,6 @@ class Post < ApplicationRecord
   end
 
   def to_param
-    "#{title.parameterize}-#{uuid_hash}"
+    "#{title.parameterize}-#{slug}"
   end
 end
