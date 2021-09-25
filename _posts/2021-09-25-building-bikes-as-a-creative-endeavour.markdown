@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: 
+cover: images/posts/2021/09/IMG_5526_1024x1024.jpg
 navigation: True
 title: Building bikes as a creative endeavour
 date: 2021-09-25T22:26:58+01:00
