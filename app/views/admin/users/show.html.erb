@@ -25,4 +25,7 @@
   <%= link_to @user.avatar.filename, @user.avatar if @user.avatar.attached? %>
 </p>
 
-<%= render partial: 'posts/table', locals: { user: @user, posts: @user.posts } %>
+<%= render partial: 'posts/table', locals: { posts: @user.posts } %>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

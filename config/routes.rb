@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  namespace :admin do
+    resources :posts
+    resources :users
+  end
+
+  resources :users, only: [:show] do
+    resources :posts, only: [:index, :show]
+  end
 end

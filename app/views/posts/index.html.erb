@@ -2,8 +2,4 @@
 
 <h1>Posts</h1>
 
-<%= render partial: 'table', locals: { posts: @posts } %>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<%= render partial: 'table', locals: { user: @user, posts: @posts } %>
