@@ -1,0 +1,20 @@
+/* -----------------------------------------------------------------------
+ 
+Blueprint CSS Framework 0.7.1
+http://blueprintcss.googlecode.com
+ 
+* Copyright (c) 2007-2008. See LICENSE for more info.
+* See README for instructions on how to use Blueprint.
+* For credits and origins, see AUTHORS.
+* This is a compressed file. See the sources in the 'src' directory.
+ 
+----------------------------------------------------------------------- */
+ 
+/* ie.css */
+body {text-align:center;}
+.container {text-align:left;}
+ol {margin-left:2em;}
+sup {vertical-align:text-top;}
+sub {vertical-align:text-bottom;}
+p code {*white-space:normal;}
+hr {margin:-8px auto 11px;}
