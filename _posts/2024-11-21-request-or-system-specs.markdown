@@ -31,4 +31,4 @@ On a small codebase with either a single developer or very well defined conventi
 
 Testing redirects with a request spec are very very fast and can make it easier to test the results of various types of form submissions, for example. The same goes for HTTP response handling with request specs. Depending on what you want to get from your tests, quickly testing the response type and having another test elsewhere for testing how the browser handles the response codes (with an error page, for example) can start to add up to quite a bit of time savings. 
 
-I’ve just started dipping my tes into the world of view specs and I'm starting to get the hang of them a bit now, they seem to be helping me think of partials in particualr as components due ot the way you need to stub out the inputs to them. More on them in a later post!
+I’ve just started dipping my toes into the world of view specs and I'm starting to get the hang of them a bit now, they seem to be helping me think of partials in particualr as components due to the way you need to stub out the inputs to them. More on that in a later post!
