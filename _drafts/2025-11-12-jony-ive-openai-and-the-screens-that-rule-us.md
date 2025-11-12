@@ -5,10 +5,12 @@ navigation: true
 class: post-template
 subclass: 'post'
 title: "Jony Ive, OpenAI, and the Screens That Rule Us"
-date: 2025-11-12T21:13:03.425Z
+date: 2025-11-12T21:20:09.852Z
 ---
 
 Jony Ive recently reflected on the “unforeseen consequences” of innovation: “If you make something new, if you innovate, there will be consequences unforeseen, and some will be wonderful and some will be harmful.”
+
+![](https://raw.githubusercontent.com/colinframe/colinframe.com/master/_drafts/2025-11-12-2025-11-12t21-20-08-981z.md)
 
 It’s easy to see this in hindsight—from the introduction of the iPhone to the rise of social media. He’s also admitted, “While some of the less positive consequences were unintentional, I still feel responsibility.” That’s not a statement he makes lightly.
 
