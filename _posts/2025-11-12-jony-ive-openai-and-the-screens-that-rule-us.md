@@ -5,7 +5,6 @@ navigation: true
 class: post-template
 subclass: 'post'
 title: "Jony Ive, OpenAI, and the Screens That Rule Us"
-date: 2025-11-12T13:07:34.249Z
 ---
 
 ![](https://raw.githubusercontent.com/colinframe/colinframe.com/master/_posts/2025-11-12-2025-11-12t11-42-05-576z.md)
