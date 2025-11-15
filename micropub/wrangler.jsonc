@@ -1,7 +1,0 @@
-  {
-    "name": "icropub",
-    "compatibility_date": "2025-11-13",
-    "assets": {
-        "directory": "./functions"
-    }
-  }
