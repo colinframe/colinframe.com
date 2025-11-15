@@ -77,20 +77,56 @@ export default {
 		const url = new URL(request.url)
 		const micropub = getMicropub(env)
 
-        		// Debug logging
+		// Debug logging
 		console.log('Request URL:', request.url)
-		console.log('Authorization header:', request.headers.get('authorization'))
-		console.log('ME config:', env.ME)
-		console.log('TOKEN_ENDPOINT config:', env.TOKEN_ENDPOINT)
+		console.log('Method:', request.method)
+		console.log('Query params:', Object.fromEntries(url.searchParams))
 
-		// Route based on pathname
-		if (url.pathname === '/media' || url.pathname === '/media/') {
-			return await micropub.mediaHandler(request)
-		} else if (url.pathname === '/micropub' || url.pathname === '/micropub/') {
-			return await micropub.micropubHandler(request)
+		try {
+			// Route based on pathname
+			if (url.pathname === '/media' || url.pathname === '/media/') {
+				return await micropub.mediaHandler(request)
+			} else if (url.pathname === '/micropub' || url.pathname === '/micropub/') {
+				const q = url.searchParams.get('q')
+				
+				// Handle unauthenticated config queries
+				if (q === 'config') {
+					return new Response(
+						JSON.stringify({
+							'media-endpoint': 'https://micropub.colin-c77.workers.dev/media',
+							// Add other config options as needed
+							// 'syndicate-to': [...],
+							// 'post-types': [...]
+						}),
+						{
+							status: 200,
+							headers: { 
+								'Content-Type': 'application/json',
+								'Access-Control-Allow-Origin': '*'
+							}
+						}
+					)
+				}
+				
+				const response = await micropub.micropubHandler(request)
+				console.log('Response status:', response?.status)
+				return response
+			}
+
+			// Handle root path or 404
+			return new Response('Not Found', { status: 404 })
+		} catch (error) {
+			console.error('Error:', error)
+			return new Response(
+				JSON.stringify({ 
+					error: 'internal_server_error',
+					error_description: error.message 
+				}),
+				{
+					status: 500,
+					headers: { 'Content-Type': 'application/json' }
+				}
+			)
 		}
-
-		// Handle root path or 404
-		return new Response('Not Found', { status: 404 })
 	}
 }
