@@ -19,7 +19,7 @@ compatibility_flags = [ "nodejs_compat" ]
 
 # Or use environment variables for non-sensitive data:
 [vars]
-GITHUB_USER=colinframe
-GITHUB_REPO=colinframe.com
-ME=https://www.colinframe.com/
-TOKEN_ENDPOINT=https://tokens.indieauth.com/token
+GITHUB_USER = "colinframe"
+GITHUB_REPO = "colinframe.com"
+ME = "https://www.colinframe.com/"
+TOKEN_ENDPOINT = "https://tokens.indieauth.com/token"
