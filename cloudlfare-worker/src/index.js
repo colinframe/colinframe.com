@@ -13,8 +13,8 @@ function getMicropub(env) {
 		store,
 		me: env.ME,
 		tokenEndpoint: env.TOKEN_ENDPOINT,
-		// contentDir: 'src',
-		// mediaDir: 'uploads',
+		contentDir: '.',
+		mediaDir: 'images/posts',
 		// https://micropub.spec.indieweb.org/#configuration
 		config: {
 			// 'media-endpoint': 'https://your-worker.workers.dev/media',
@@ -36,6 +36,7 @@ function getMicropub(env) {
 			// 	{ type: 'game', name: 'Game' },
 			// ],
 		},
+        formatSlug: (type, filename) => { formatSlug: (type, slug) => `_posts/${slug}` }
 		// formatSlug: (type, filename) => {
 		// 	const typeToSlug = {
 		// 		like: 'likes',
