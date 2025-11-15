@@ -1,0 +1,27 @@
+{
+  "name": "serverless-micropub",
+  "description": "serverless micropub receiver",
+  "version": "2.0.0",
+  "main": "index.js",
+  "keywords": [
+    "indieweb",
+    "micropub",
+    "netlify",
+    "serverless"
+  ],
+  "author": "Benji Encalada Mora (https://benji.dog)",
+  "homepage": "https://github.com/benjifs/serverless-micropub",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjifs/serverless-micropub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benjifs/serverless-micropub/issues"
+  },
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@benjifs/github-store": "^0.2.0",
+    "@benjifs/micropub": "^2.0.0"
+  }
+}
