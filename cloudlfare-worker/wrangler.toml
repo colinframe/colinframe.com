@@ -18,8 +18,8 @@ compatibility_flags = [ "nodejs_compat" ]
 # Run: wrangler secret put GITHUB_REPO
 
 # Or use environment variables for non-sensitive data:
-# [vars]
-# GITHUB_USER = "yourusername"
-# GITHUB_REPO = "yourrepo"
-# ME = "https://yourdomain.com"
-# TOKEN_ENDPOINT = "https://tokens.indieauth.com/token"
+[vars]
+GITHUB_USER=colinframe
+GITHUB_REPO=colinframe.com
+ME=https://www.colinframe.com/
+TOKEN_ENDPOINT=https://tokens.indieauth.com/token
