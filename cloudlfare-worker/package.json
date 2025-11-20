@@ -1,0 +1,16 @@
+{
+  "name": "micropub-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@benjifs/micropub": "latest",
+    "@benjifs/github-store": "latest"
+  }
+}

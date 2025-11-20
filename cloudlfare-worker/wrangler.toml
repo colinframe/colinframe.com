@@ -1,0 +1,25 @@
+name = "micropub"
+main = "src/index.js"
+compatibility_date = "2024-11-13"
+compatibility_flags = [ "nodejs_compat" ]
+
+# Optional: Define routes if you want to use a custom domain
+# routes = [
+#   { pattern = "yourdomain.com/micropub", custom_domain = true },
+#   { pattern = "yourdomain.com/media", custom_domain = true }
+# ]
+
+# Environment variables (add these via dashboard or wrangler secret)
+# These should be set as secrets, not in this file!
+# Run: wrangler secret put GITHUB_TOKEN
+# Run: wrangler secret put ME
+# Run: wrangler secret put TOKEN_ENDPOINT
+# Run: wrangler secret put GITHUB_USER
+# Run: wrangler secret put GITHUB_REPO
+
+# Or use environment variables for non-sensitive data:
+[vars]
+GITHUB_USER = "colinframe"
+GITHUB_REPO = "colinframe.com"
+ME = "https://www.colinframe.com/"
+TOKEN_ENDPOINT = "https://tokens.indieauth.com/token"
