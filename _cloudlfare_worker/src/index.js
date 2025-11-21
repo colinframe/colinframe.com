@@ -1,6 +1,22 @@
 import Micropub from '@benjifs/micropub'
 import GitHubStore from '@benjifs/github-store'
 
+// Custom front matter fields to inject
+const CUSTOM_FRONT_MATTER = `navigation: true
+class: post-template
+`
+
+// UTF-8 safe base64 encoding/decoding
+function base64Decode(str) {
+	const bytes = Uint8Array.from(atob(str), c => c.charCodeAt(0))
+	return new TextDecoder().decode(bytes)
+}
+
+function base64Encode(str) {
+	const bytes = new TextEncoder().encode(str)
+	return btoa(String.fromCharCode(...bytes))
+}
+
 // Initialize micropub instance with environment variables
 function getMicropub(env) {
 	const store = new GitHubStore({
@@ -9,7 +25,8 @@ function getMicropub(env) {
 		repo: env.GITHUB_REPO,
 	})
 
-		// Fix GitHub API compatibility for Cloudflare Workers
+	// Fix GitHub API compatibility for Cloudflare Workers
+	// AND inject custom front matter into markdown files
 	const originalFetch = globalThis.fetch
 	globalThis.fetch = async function(url, options = {}) {
 		if (url && url.includes('api.github.com')) {
@@ -17,9 +34,43 @@ function getMicropub(env) {
 			const fixedUrl = url.replace(/%2F/g, '/')
 			
 			// Add required User-Agent header
-			const headers = options.headers || {}
+			const headers = { ...options.headers } || {}
 			if (!headers['User-Agent'] && !headers['user-agent']) {
 				headers['User-Agent'] = 'Micropub-Cloudflare-Worker/1.0'
+			}
+			
+			// Intercept PUT requests to inject custom front matter
+			console.log('GitHub API request:', options.method, fixedUrl)
+			if ((options.method === 'PUT' || options.method === 'POST') && options.body) {
+				console.log('Intercepted write request to:', fixedUrl)
+				try {
+					const body = JSON.parse(options.body)
+					console.log('Has content:', !!body.content, 'URL has .md:', fixedUrl.includes('.md'))
+					if (body.content) {
+						const decoded = base64Decode(body.content)
+						console.log('Content preview:', decoded.substring(0, 200))
+						// Decode base64 content (UTF-8 safe)
+						const content = base64Decode(body.content)
+						
+						// Check if it's a markdown file with front matter
+						if (decoded.startsWith('---')) {
+							console.log('Found front matter, injecting custom fields')
+							// Inject custom fields after the opening ---
+							const modifiedContent = decoded.replace(
+								/^---\n/,
+								`---\n${CUSTOM_FRONT_MATTER}`
+							)
+							console.log('Modified preview:', modifiedContent.substring(0, 200))
+							// Re-encode (UTF-8 safe) and update the body
+							body.content = base64Encode(modifiedContent)
+							options.body = JSON.stringify(body)
+							console.log('Body updated successfully')
+						}
+					}
+				} catch (e) {
+					// If parsing fails, continue with original body
+					console.error('Failed to inject front matter:', e)
+				}
 			}
 			
 			return originalFetch(fixedUrl, { ...options, headers })
@@ -34,41 +85,8 @@ function getMicropub(env) {
 		tokenEndpoint: env.TOKEN_ENDPOINT,
 		contentDir: '_drafts',
 		mediaDir: 'images/posts',
-		// https://micropub.spec.indieweb.org/#configuration
-		config: {
-			// 'media-endpoint': 'https://your-worker.workers.dev/media',
-			// 'syndicate-to': [
-			// 	{ uid: 'https://fed.brid.gy/', name: 'w/ Bridgy Fed', checked: true },
-			// ],
-			// 'post-types': [
-			// 	{ type: 'note', name: 'Note' },
-			// 	{ type: 'photo', name: 'Photo' },
-			// 	{ type: 'reply', name: 'Reply' },
-			// 	{ type: 'bookmark', name: 'Bookmark' },
-			// 	{ type: 'like', name: 'Like' },
-			// 	{ type: 'article', name: 'Article' },
-			// 	{ type: 'rsvp', name: 'RSVP' },
-			// 	{ type: 'repost', name: 'Repost' },
-			// 	{ type: 'watch', name: 'Watch' },
-			// 	{ type: 'read', name: 'Read' },
-			// 	{ type: 'listen', name: 'Listen' },
-			// 	{ type: 'game', name: 'Game' },
-			// ],
-		},
-        formatSlug: (type, filename) => filename
-		// formatSlug: (type, filename) => {
-		// 	const typeToSlug = {
-		// 		like: 'likes',
-		// 		bookmark: 'bookmarks',
-		// 		rsvp: 'rsvp',
-		// 		article: 'articles',
-		// 		watch: 'watched',
-		// 		read: 'read',
-		// 		listen: 'listen',
-		// 		play: 'play'
-		// 	}
-		// 	return `${typeToSlug[type] || 'notes'}/${filename}`
-		// },
+		config: {},
+		formatSlug: (type, filename) => filename
 	})
 }
 
@@ -94,9 +112,6 @@ export default {
 					return new Response(
 						JSON.stringify({
 							'media-endpoint': 'https://micropub.colin-c77.workers.dev/media',
-							// Add other config options as needed
-							// 'syndicate-to': [...],
-							// 'post-types': [...]
 						}),
 						{
 							status: 200,
