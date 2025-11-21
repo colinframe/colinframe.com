@@ -39,32 +39,24 @@ function getMicropub(env) {
 				headers['User-Agent'] = 'Micropub-Cloudflare-Worker/1.0'
 			}
 			
-			// Intercept PUT requests to inject custom front matter
-			console.log('GitHub API request:', options.method, fixedUrl)
+			// Intercept PUT/POST requests to inject custom front matter
 			if ((options.method === 'PUT' || options.method === 'POST') && options.body) {
-				console.log('Intercepted write request to:', fixedUrl)
 				try {
 					const body = JSON.parse(options.body)
-					console.log('Has content:', !!body.content, 'URL has .md:', fixedUrl.includes('.md'))
 					if (body.content) {
 						const decoded = base64Decode(body.content)
-						console.log('Content preview:', decoded.substring(0, 200))
 						// Decode base64 content (UTF-8 safe)
 						const content = base64Decode(body.content)
 						
-						// Check if it's a markdown file with front matter
+						// Check if it has front matter, inject custom fields
 						if (decoded.startsWith('---')) {
-							console.log('Found front matter, injecting custom fields')
-							// Inject custom fields after the opening ---
 							const modifiedContent = decoded.replace(
 								/^---\n/,
 								`---\n${CUSTOM_FRONT_MATTER}`
 							)
-							console.log('Modified preview:', modifiedContent.substring(0, 200))
 							// Re-encode (UTF-8 safe) and update the body
 							body.content = base64Encode(modifiedContent)
 							options.body = JSON.stringify(body)
-							console.log('Body updated successfully')
 						}
 					}
 				} catch (e) {
