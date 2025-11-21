@@ -13,14 +13,14 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "daily"
- - package-ecosystem: "devcontainers"
-   directory: "/"
-   schedule:
-     interval: weekly
- # Maintain dependencies for GitHub Actions
- - package-ecosystem: "github-actions"
-   # Workflow files stored in the default location of `.github/workflows`
-   directory: "/"
-   schedule:
-     interval: "daily"
-   open-pull-requests-limit: 10
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: weekly
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Workflow files stored in the default location of `.github/workflows`
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
