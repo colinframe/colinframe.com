@@ -48,8 +48,8 @@ function getMicropub(env) {
 						// Decode base64 content (UTF-8 safe)
 						const content = base64Decode(body.content)
 						
-						// Check if it has front matter, inject custom fields
-						if (decoded.startsWith('---')) {
+						// Check if it has front matter and hasn't already been processed
+						if (decoded.startsWith('---') && !decoded.includes('navigation: true')) {
 							// Find the end of front matter
 							const endOfFrontMatter = decoded.indexOf('\n---', 3)
 							
