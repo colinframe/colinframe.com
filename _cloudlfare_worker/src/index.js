@@ -50,10 +50,39 @@ function getMicropub(env) {
 						
 						// Check if it has front matter, inject custom fields
 						if (decoded.startsWith('---')) {
-							const modifiedContent = decoded.replace(
-								/^---\n/,
-								`---\n${CUSTOM_FRONT_MATTER}`
-							)
+							// Find the end of front matter
+							const endOfFrontMatter = decoded.indexOf('\n---', 3)
+							
+							let modifiedContent
+							if (endOfFrontMatter === -1) {
+								// No closing ---, just inject custom fields
+								modifiedContent = decoded.replace(
+									/^---\n/,
+									`---\n${CUSTOM_FRONT_MATTER}`
+								)
+							} else {
+								let frontMatter = decoded.substring(0, endOfFrontMatter)
+								let body = decoded.substring(endOfFrontMatter + 4) // +4 to skip \n---
+								
+								// Extract first image only if it's the first content after front matter
+								// Matches: ![alt](url) or ![](url) at the start (allowing whitespace)
+								const imgRegex = /^\s*!\[[^\]]*\]\(([^)]+)\)/
+								const imgMatch = body.match(imgRegex)
+								
+								let coverField = ''
+								if (imgMatch) {
+									const imgUrl = imgMatch[1]
+									coverField = `cover: ${imgUrl}\n`
+									// Remove only the matched image (imgMatch[0] is the full match)
+									body = body.replace(imgMatch[0], '').replace(/^\n+/, '\n')
+								}
+								
+								// Rebuild with custom front matter and cover
+								modifiedContent = frontMatter.replace(
+									/^---\n/,
+									`---\n${CUSTOM_FRONT_MATTER}${coverField}`
+								) + '\n---' + body
+							}
 							// Re-encode (UTF-8 safe) and update the body
 							body.content = base64Encode(modifiedContent)
 							options.body = JSON.stringify(body)
