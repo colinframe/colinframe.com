@@ -3,7 +3,7 @@ navigation: true
 class: post-template
 navigation: true
 class: post-template
-cover: https://www.colinframe.com/images/posts/1763659428_iA%20Presenter%20Wallpaper%20for%20iPad.png
+cover: images/posts/1763659428_iA%20Presenter%20Wallpaper%20for%20iPad.png
 type: entry
 title: Wat way way
 post-status: draft

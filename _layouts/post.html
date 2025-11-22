@@ -42,7 +42,7 @@ into the {body} of the default.hbs template -->
             </header>
 
             {% if page.cover %}
-            <figure class="post-full-image" style="background-image: url({{ site.baseurl }}{{ page.cover }})">
+            <figure class="post-full-image" style="background-image: url({{ page.cover }})">
             </figure>
             {% endif %}
 
@@ -133,7 +133,7 @@ into the {body} of the default.hbs template -->
                             style="background-image: url({{ site.baseurl }}{{ site.cover }})"
                         {% else %}
                             {% if page.cover %}
-                                style="background-image: url(url({{ site.baseurl }}{{ page.cover }})"{% endif %}
+                                style="background-image: url({{ page.cover }})"{% endif %}
                         {% endif %}
                     >
                         <header class="read-next-card-header">
