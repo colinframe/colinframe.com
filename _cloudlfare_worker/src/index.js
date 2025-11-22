@@ -104,7 +104,7 @@ function getMicropub(env) {
 		store,
 		me: env.ME,
 		tokenEndpoint: env.TOKEN_ENDPOINT,
-		contentDir: '_drafts',
+		contentDir: '_posts',
 		mediaDir: 'images/posts',
 		config: {},
 		formatSlug: (type, filename) => filename
