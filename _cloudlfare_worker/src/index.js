@@ -31,7 +31,21 @@ function getMicropub(env) {
 	globalThis.fetch = async function(url, options = {}) {
 		if (url && url.includes('api.github.com')) {
 			// Decode URL-encoded slashes
-			const fixedUrl = url.replace(/%2F/g, '/')
+			let fixedUrl = url.replace(/%2F/g, '/')
+			
+			// Add date prefix to markdown filenames if missing
+			// Matches: /_drafts/something.md or /_posts/something.md
+			const mdFileRegex = /(\/_(?:drafts|posts)\/)([^\/]+)(\.md)$/
+			const mdMatch = fixedUrl.match(mdFileRegex)
+			if (mdMatch) {
+				const [, path, filename, ext] = mdMatch
+				// Check if filename already has date prefix (YYYY-MM-DD-)
+				if (!/^\d{4}-\d{2}-\d{2}-/.test(filename)) {
+					const today = new Date()
+					const datePrefix = today.toISOString().split('T')[0] + '-'
+					fixedUrl = fixedUrl.replace(mdFileRegex, `${path}${datePrefix}${filename}${ext}`)
+				}
+			}
 			
 			// Add required User-Agent header
 			const headers = { ...options.headers } || {}
