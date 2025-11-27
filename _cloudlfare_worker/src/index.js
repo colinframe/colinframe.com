@@ -4,6 +4,8 @@ import GitHubStore from '@benjifs/github-store'
 // Custom front matter fields to inject
 const CUSTOM_FRONT_MATTER = `navigation: true
 class: post-template
+layout: post
+current: post
 `
 
 // UTF-8 safe base64 encoding/decoding
