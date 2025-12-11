@@ -11,8 +11,6 @@ date: '2025-12-11T15:48:59.438Z'
 client_id: 'https://ia.net/writer'
 ---
 
-<h1>Max your days</h1>
-
 <p>Almost 10 years ago The North Face put out an ad campaign called Max Your Days which was all about trying to squeeze the absolute maximum out of the summer solstice. It was really well put together for the time.</p>
 
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/DOKfnc2PwjI?si=kIs5YubMHemQdYeW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
