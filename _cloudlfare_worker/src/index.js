@@ -77,6 +77,10 @@ function getMicropub(env) {
 									postBody = postBody.replace(imgMatch[0], '').replace(/^\n+/, '\n')
 								}
 								
+								// Remove first H1 heading (since title is in front matter)
+								// Matches: # Heading at the start (after any whitespace/newlines)
+								postBody = postBody.replace(/^\s*#\s+[^\n]+\n*/, '')
+								
 								// Rebuild with custom front matter and cover
 								modifiedContent = frontMatter.replace(
 									/^---\n/,
@@ -104,7 +108,7 @@ function getMicropub(env) {
 		store,
 		me: env.ME,
 		tokenEndpoint: env.TOKEN_ENDPOINT,
-		contentDir: '_drafts',
+		contentDir: '_posts',
 		mediaDir: 'images/posts',
 		config: {},
 		formatSlug: (type, filename) => {
