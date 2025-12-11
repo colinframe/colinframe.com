@@ -44,9 +44,9 @@ function getMicropub(env) {
 			// Intercept PUT/POST requests to inject custom front matter
 			if ((options.method === 'PUT' || options.method === 'POST') && options.body) {
 				try {
-					const body = JSON.parse(options.body)
-					if (body.content) {
-						const decoded = base64Decode(body.content)
+					const requestBody = JSON.parse(options.body)
+					if (requestBody.content) {
+						const decoded = base64Decode(requestBody.content)
 						
 						// Check if it has front matter and hasn't already been processed
 						if (decoded.startsWith('---') && !decoded.includes('navigation: true')) {
@@ -62,30 +62,30 @@ function getMicropub(env) {
 								)
 							} else {
 								let frontMatter = decoded.substring(0, endOfFrontMatter)
-								let body = decoded.substring(endOfFrontMatter + 4) // +4 to skip \n---
+								let postBody = decoded.substring(endOfFrontMatter + 4) // +4 to skip \n---
 								
 								// Extract first image only if it's the first content after front matter
 								// Matches: ![alt](url) or ![](url) at the start (allowing whitespace)
 								const imgRegex = /^\s*!\[[^\]]*\]\(([^)]+)\)/
-								const imgMatch = body.match(imgRegex)
+								const imgMatch = postBody.match(imgRegex)
 								
 								let coverField = ''
 								if (imgMatch) {
 									const imgUrl = imgMatch[1]
 									coverField = `cover: ${imgUrl}\n`
 									// Remove only the matched image (imgMatch[0] is the full match)
-									body = body.replace(imgMatch[0], '').replace(/^\n+/, '\n')
+									postBody = postBody.replace(imgMatch[0], '').replace(/^\n+/, '\n')
 								}
 								
 								// Rebuild with custom front matter and cover
 								modifiedContent = frontMatter.replace(
 									/^---\n/,
 									`---\n${CUSTOM_FRONT_MATTER}${coverField}`
-								) + '\n---' + body
+								) + '\n---' + postBody
 							}
-							// Re-encode (UTF-8 safe) and update the body
-							body.content = base64Encode(modifiedContent)
-							options.body = JSON.stringify(body)
+							// Re-encode (UTF-8 safe) and update the request body
+							requestBody.content = base64Encode(modifiedContent)
+							options.body = JSON.stringify(requestBody)
 						}
 					}
 				} catch (e) {
@@ -104,7 +104,7 @@ function getMicropub(env) {
 		store,
 		me: env.ME,
 		tokenEndpoint: env.TOKEN_ENDPOINT,
-		contentDir: '_posts',
+		contentDir: '_drafts',
 		mediaDir: 'images/posts',
 		config: {},
 		formatSlug: (type, filename) => {
