@@ -35,22 +35,8 @@ function getMicropub(env) {
 			// Decode URL-encoded slashes
 			let fixedUrl = url.replace(/%2F/g, '/')
 			
-			// Add date prefix to markdown filenames if missing
-			// Matches: /_drafts/something.md or /_posts/something.md
-			const mdFileRegex = /(\/_(?:drafts|posts)\/)([^\/]+)(\.md)$/
-			const mdMatch = fixedUrl.match(mdFileRegex)
-			if (mdMatch) {
-				const [, path, filename, ext] = mdMatch
-				// Check if filename already has date prefix (YYYY-MM-DD-)
-				if (!/^\d{4}-\d{2}-\d{2}-/.test(filename)) {
-					const today = new Date()
-					const datePrefix = today.toISOString().split('T')[0] + '-'
-					fixedUrl = fixedUrl.replace(mdFileRegex, `${path}${datePrefix}${filename}${ext}`)
-				}
-			}
-			
 			// Add required User-Agent header
-			const headers = { ...options.headers } || {}
+			const headers = options.headers || {}
 			if (!headers['User-Agent'] && !headers['user-agent']) {
 				headers['User-Agent'] = 'Micropub-Cloudflare-Worker/1.0'
 			}
@@ -61,8 +47,6 @@ function getMicropub(env) {
 					const body = JSON.parse(options.body)
 					if (body.content) {
 						const decoded = base64Decode(body.content)
-						// Decode base64 content (UTF-8 safe)
-						const content = base64Decode(body.content)
 						
 						// Check if it has front matter and hasn't already been processed
 						if (decoded.startsWith('---') && !decoded.includes('navigation: true')) {
@@ -123,7 +107,15 @@ function getMicropub(env) {
 		contentDir: '_posts',
 		mediaDir: 'images/posts',
 		config: {},
-		formatSlug: (type, filename) => filename
+		formatSlug: (type, filename) => {
+			// Add date prefix if not already present (Jekyll requirement: YYYY-MM-DD-title.md)
+			if (!/^\d{4}-\d{2}-\d{2}-.+/.test(filename)) {
+				const today = new Date()
+				const datePrefix = today.toISOString().split('T')[0] + '-'
+				return datePrefix + filename
+			}
+			return filename
+		}
 	})
 }
 
@@ -131,11 +123,6 @@ export default {
 	async fetch(request, env, ctx) {
 		const url = new URL(request.url)
 		const micropub = getMicropub(env)
-
-		// Debug logging
-		console.log('Request URL:', request.url)
-		console.log('Method:', request.method)
-		console.log('Query params:', Object.fromEntries(url.searchParams))
 
 		try {
 			// Route based on pathname
@@ -160,9 +147,7 @@ export default {
 					)
 				}
 				
-				const response = await micropub.micropubHandler(request)
-				console.log('Response status:', response?.status)
-				return response
+				return await micropub.micropubHandler(request)
 			}
 
 			// Handle root path or 404
