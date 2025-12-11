@@ -65,7 +65,6 @@ function getMicropub(env) {
 								let postBody = decoded.substring(endOfFrontMatter + 4) // +4 to skip \n---
 								
 								// Extract first image only if it's the first content after front matter
-								// Matches: ![alt](url) or ![](url) at the start (allowing whitespace)
 								const imgRegex = /^\s*!\[[^\]]*\]\(([^)]+)\)/
 								const imgMatch = postBody.match(imgRegex)
 								
@@ -73,19 +72,21 @@ function getMicropub(env) {
 								if (imgMatch) {
 									const imgUrl = imgMatch[1]
 									coverField = `cover: ${imgUrl}\n`
-									// Remove only the matched image (imgMatch[0] is the full match)
-									postBody = postBody.replace(imgMatch[0], '').replace(/^\n+/, '\n')
+									// Remove only the matched image
+									postBody = postBody.replace(imgMatch[0], '')
 								}
 								
-								// Remove first H1 heading (since title is in front matter)
-								// Matches: # Heading at the start (after any whitespace/newlines)
+								// Remove first H1 heading (markdown, since title is in front matter)
 								postBody = postBody.replace(/^\s*#\s+[^\n]+\n*/, '')
+								
+								// Clean up excessive leading whitespace but ensure blank line after front matter
+								postBody = postBody.replace(/^\s+/, '\n\n')
 								
 								// Rebuild with custom front matter and cover
 								modifiedContent = frontMatter.replace(
 									/^---\n/,
 									`---\n${CUSTOM_FRONT_MATTER}${coverField}`
-								) + '\n---' + postBody
+								) + '\n---\n' + postBody
 							}
 							// Re-encode (UTF-8 safe) and update the request body
 							requestBody.content = base64Encode(modifiedContent)
