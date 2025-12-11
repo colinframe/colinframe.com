@@ -1,6 +1,7 @@
 ---
 navigation: true
 class: post-template
+cover: https://www.colinframe.com/images/posts/1765464746_IMG_0002.JPG
 layout: post
 current: post
 type: entry
@@ -9,9 +10,6 @@ post-status: draft
 date: '2025-12-11T15:48:59.438Z'
 client_id: 'https://ia.net/writer'
 ---
-<figure>
-<img src="https://www.colinframe.com/images/posts/1765464746_IMG_0002.JPG" alt="" />
-</figure>
 
 <h1>Max your days</h1>
 
