@@ -12,7 +12,7 @@ client_id: 'https://ia.net/writer'
 ---
 If you’ve read anything else on here you’ll know this is a bit of a recurring theme for me. Trying to take back my attention, pondering about screens ruling us. I keep circling the same problem: trying to be present and less distracted by things which don’t bring me value.
 
-What I haven’t actually written about, oddly, is the thing that came out of all that circling. Two years ago I built a web app called [Daily Intention](httpw://www.dailyintention.co). The gist of it is that Every morning you write one sentence — what you want today to be about — and a line on why it matters. Every evening you look back, honestly, and ask: how did I get on with that? No streaks, no scoring, no notification badge guilting you back in. Just the habit of asking the question, twice a day, until it starts asking itself.
+What I haven’t actually written about, oddly, is the thing that came out of all that circling. Two years ago I built a web app called [Daily Intention](https://www.dailyintention.co). The gist of it is that Every morning you write one sentence — what you want today to be about — and a line on why it matters. Every evening you look back, honestly, and ask: how did I get on with that? No streaks, no scoring, no notification badge guilting you back in. Just the habit of asking the question, twice a day, until it starts asking itself.
 
 I built it because all my other attempts at this were defensive — blocking Twitter, deleting email off my phone, etc. Useful, but they only answer half the question. Remove the distraction and do what instead? Daily Intention was my attempt at the other half.
 
@@ -38,6 +38,6 @@ Honestly, I was close to shutting the whole thing down. I’m the only regular u
 
 That’s genuinely all Daily Intention ever was, company or no company. Not a business plan, just something I wished existed. Two years, £0 gross, and it turns out that’s fine, because grossing £0 was never really the point.
 
-So: no Ltd company anymore, still a working app at [dailyintention.co](https://dailyintention.co). If you’ve ever found yourself doom-scrolling and wondering how you got there instead of doing the thing you meant to do, it might be worth a look. And unlike most of my “I’ll update on this” posts, I actually mean it this time — I’ve got two years of this thing quietly working, so there should be something worth saying next time round.
+So: no Ltd company anymore, still a working app at [dailyintention.co](https://www.dailyintention.co). If you’ve ever found yourself doom-scrolling and wondering how you got there instead of doing the thing you meant to do, it might be worth a look. And unlike most of my “I’ll update on this” posts, I actually mean it this time — I’ve got two years of this thing quietly working, so there should be something worth saying next time round.
 
 Photo by <a href="https://unsplash.com/@damaniam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daman IAm</a> on <a href="https://unsplash.com/photos/scrabble-tiles-spelling-out-the-words-set-in-intentions-first-GwB20-TLeJo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
