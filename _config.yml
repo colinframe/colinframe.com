@@ -11,7 +11,7 @@ url: "https://www.colinframe.com"
 
 # Website info
 title: My Name is Colin. So what else do you need to know?
-description: Trust me, it's paradise.
+description: Colin Frame — writing about attention, technology, and trying to be a bit more deliberate about both.
 cover: assets/images/blog-cover.jpg
 logo: assets/images/logo.png
 logo_dark: assets/images/favicon.png
@@ -24,7 +24,7 @@ navigation: True # show the navbar links
 subscribers: False # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: _colinframe # replace by your username
+twitter: False # account dormant; set to a handle to restore the nav/footer links and twitter:site/creator tags
 facebook: False # replace by your username
 
 # Disqus
