@@ -5,7 +5,7 @@ layout: post
 current: post
 cover: https://www.colinframe.com/images/posts/1788720265_IMG_0105.JPG
 type: entry
-title: 'You are not your job, or are you'
+title: 'You are not your job, or are you?'
 post-status: draft
 date: '2026-09-06T18:44:26.300Z'
 client_id: 'https://ia.net/writer'
