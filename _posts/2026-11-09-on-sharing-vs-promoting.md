@@ -5,7 +5,7 @@ layout: post
 current: post
 cover: https://www.colinframe.com/images/posts/1794252525_LoveFrom.webp
 type: entry
-title: I started watching this video the other night as it sounded
+title: On sharing vs. promoting
 post-status: draft
 date: '2026-11-09T19:28:47.267Z'
 client_id: 'https://ia.net/writer'
